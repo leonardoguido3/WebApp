@@ -1,3 +1,9 @@
+function OcultarElementos() {
+    if (nivelAcesso == '2') {
+        $("#cadastrarClientes").hide();
+    }
+}
+
 // assim que finaliza a leitura de todo o documento ele lista os clientes de forma automatica
 $(document).ready(function () {
     ListarClientes();
@@ -21,7 +27,10 @@ function ListarClientes() {
     $.ajax({
         url: urlBaseApi + rotaApi,
         method: 'GET',
-        dataType: 'json'
+        dataType: 'json',
+        // beforeSend: function (xhr){
+        //     xhr.setRequestHeader('Authorization', 'Bearer' + localStorage.getItem('bearer'));
+        // }
     }).done(function (conteudoApi) {
         ConstruirTabelaCliente(conteudoApi);
     });
