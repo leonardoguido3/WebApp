@@ -3,13 +3,12 @@ function exibirElementosVendedor() {
     if(nivelAcesso == '1'){
         $("#cardCadastroCliente").show();
     }
-}
+};
 
 // assim que finaliza a leitura de todo o documento ele lista os clientes de forma automatica
 $(document).ready(function () {
-    ListarClientes();
-    $(".preloading").hide();
-})
+    ListarClientes();  
+});
 
 // criei uma variavel contendo a string da minha url base onde estão minhas APIs
 var tabelaCliente;

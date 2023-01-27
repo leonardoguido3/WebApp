@@ -1,5 +1,9 @@
 // lendo o documento e inserindo as mascaras
 $(document).ready(function () {
+    setTimeout(function(){
+        $(".preloading").hide();
+    }, 1000);
+
     $('.cpf').mask('000.000.000-00', { reverse: true });
     $('.telefone').mask('(00) 00000-0000');
 

@@ -12,15 +12,16 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/11.7.1/sweetalert2.min.css"
         integrity="sha512-NvuRGlPf6cHpxQqBGnPe7fPoACpyrjhlSNeXVUY7BZAj1nNhuNpRBq3osC4yr2vswUEuHq2HtCsY2vfLNCndYA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-        <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/clientes.css">
 
 </head>
 
 <body>
     <div class="preloading">
-        <img src="img/preloading.gif">
+        <img src="img/preloading.gif" alt="Preloader">
     </div>
+
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">Primeiro Web App</a>
@@ -31,7 +32,10 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="index.html">Clientes</a>
+                        <a class="nav-link active" aria-current="page" href="clientes.html">Clientes</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html">Sair</a>
                     </li>
                 </ul>
             </div>
@@ -39,8 +43,9 @@
     </nav>
     <main>
         <section class="pt-2 container" id="cadastrarClientes">
-            <h1 class="text-center">Cadastrar Clientes</h1>
-            <div class="card mt-5 ocultarElemento">
+            
+            <div class="card mt-5 ocultarElemento" id="cardCadastroCliente">
+                <h1 class="text-center">Cadastrar Clientes</h1>
                 <div class="card-body">
                     <form id="formularioCliente" data-parsley-validate="">
                         <div class="mb-3">
